@@ -543,7 +543,7 @@ def OVE6D_rcnn_full_pose(model_func, obj_depths, obj_masks, obj_rcnn_scores, obj
                                             max_iterations=config.ICP_max_iterations,
                                             neighbors=config.ICP_neighbors,
                                             min_planarity=config.ICP_min_planarity
-                                            ).cpu().squeeze()
+                                            ).cpu().squeeze().type(torch.float32)
             H_est_refined = icp_H @ H_est
             icp_refined_R = H_est_refined[:3, :3]
             icp_refined_t = H_est_refined[:3, 3]
