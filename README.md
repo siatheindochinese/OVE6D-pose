@@ -7,6 +7,8 @@
 ## Real-Time Inference
 
 Real-time inference on an Intel Realsense D455 Depth Camera:
+![demo_vid](assets/realtimebysia2.gif)
+
 ![demo_vid](assets/realtimebysia.gif)
 
 The model follows a 2-stage pipeline:
